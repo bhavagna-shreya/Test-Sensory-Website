@@ -1,10 +1,10 @@
-import React from 'react';
 import BubbleField from './components/BubbleField';
 import Interactive3DShape from './components/Interactive3DShape';
 import OceanBackground from './components/OceanBackground';
 import ThemeToggle from './components/ThemeToggle';
 import BreathingExercise from './components/BreathingExercise';
 import ColorMixer from './components/ColorMixer';
+import MemoryGame from './components/MemoryGame';
 
 function App() {
   return (
@@ -49,6 +49,17 @@ function App() {
               <ColorMixer />
               <p className="mt-4 text-blue-800 dark:text-blue-200">
                 Mix colors to create your perfect calming shade!
+              </p>
+            </div>
+
+            {/* Memory Game Component */}
+            <div className="bg-white/80 dark:bg-gray-800/80 rounded-xl p-8 backdrop-blur-sm shadow-lg transition-transform hover:scale-105">
+              <h2 className="text-2xl font-semibold text-blue-900 dark:text-blue-100 mb-4">
+                Memory Game
+              </h2>
+              <MemoryGame />
+              <p className="mt-4 text-blue-800 dark:text-blue-200">
+                Test your memory by matching pairs of cards!
               </p>
             </div>
           </div>
