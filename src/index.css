@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes swim {
+  0% {
+    transform: translateX(-100%) translateY(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(100vw) translateY(-20px) scaleX(1);
+  }
+  51% {
+    transform: translateX(100vw) translateY(-20px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-100%) translateY(0) scaleX(-1);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(-15px) scaleY(1.1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-swim {
+  animation: swim 15s linear infinite;
+}
+
+.animate-wave {
+  animation: wave 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+body {
+  @apply antialiased;
+}
+
+* {
+  @apply transition-colors duration-200;
+}
